@@ -15,7 +15,7 @@ interface SpotifyService {
      * @return A callback containing object with the featured playlists
      * @see <a href="https://developer.spotify.com/web-api/get-list-featured-playlists/">Get a List of Featured Playlists</a>
      */
-    @GET("v1//browse/featured-playlists")
+    @GET("v1/browse/featured-playlists")
     fun getFeaturedPlaylists(@QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -37,7 +37,7 @@ interface SpotifyService {
      * @return A callback containing categories.
      * @see <a href="https://developer.spotify.com/web-api/get-list-categories/">Get a List of Categories</a>
      */
-    @GET("v1//browse/categories")
+    @GET("v1/browse/categories")
     fun getCategories(@QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -48,7 +48,7 @@ interface SpotifyService {
      * @return A callback containing a Spotify category.
      * @see <a href="https://developer.spotify.com/web-api/get-category/">Get a Spotify Category</a>
      */
-    @GET("v1//browse/categories/{category_id}")
+    @GET("v1/browse/categories/{category_id}")
     fun getCategory(@Path("category_id") categoryId: String, @QueryMap options: Map<String, Any>?): Call<Unit>
 
     /**
@@ -59,6 +59,6 @@ interface SpotifyService {
      * @return A callback containing playlists for a Spotify Category.
      * @see <a href="https://developer.spotify.com/web-api/get-categorys-playlists/">Get playlists for a Spotify Category</a>
      */
-    @GET("v1//browse/categories/{category_id}/playlists")
+    @GET("v1/browse/categories/{category_id}/playlists")
     fun getPlaylistsCategory(@Path("category_id") categoryId: String, @QueryMap options: Map<String, Any>?): Call<Unit>
 }
